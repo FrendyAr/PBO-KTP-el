@@ -1,7 +1,7 @@
 package elektronik.ktp;
 
 public class Penduduk {
-    private String nik,tempatTtglLahir, nama, jenisKelamin, alamat, rtRw, kelDesa, kecamatan, agama, stKawin
+    private String nik,tempatTglLahir, nama, jenisKelamin, alamat, rtRw, kelDesa, kecamatan, agama, stKawin
             , pekerjaan, wargaNegara, berlakuHingga;
 
     public Penduduk() {
@@ -51,8 +51,8 @@ public class Penduduk {
         return stKawin;
     }
 
-    public String getTempatTtglLahir() {
-        return tempatTtglLahir;
+    public String getTempatTglLahir() {
+        return tempatTglLahir;
     }
 
     public String getWargaNegara() {
@@ -103,8 +103,8 @@ public class Penduduk {
         this.stKawin = stKawin;
     }
 
-    public void setTempatTtglLahir(String tempatTtglLahir) {
-        this.tempatTtglLahir = tempatTtglLahir;
+    public void setTempatTglLahir(String tempatTglLahir) {
+        this.tempatTglLahir = tempatTglLahir;
     }
 
     public void setWargaNegara(String wargaNegara) {
