@@ -81,21 +81,21 @@ public class ElektronikKTP extends Application {
 			alamatTextField.getText();
 			
 			Label rt = new Label("RT:");
-			grid.add(rt, 1, 6);
+			grid.add(rt, 0, 6);
 			
 			TextField rtTextField = new TextField();
-			grid.add(rtTextField, 2, 6);
+			grid.add(rtTextField, 1, 6);
 			rtTextField.setPromptText("Masukkan RT/RW");
 			rtTextField.getText();
 			
 			Label kelDes = new Label("Kel/Desa:");
-			grid.add(kelDes, 1, 7);
+			grid.add(kelDes, 0, 7);
 			
 			TextField kelDesTextField = new TextField();
-			grid.add(kelDesTextField, 2, 7);
+			grid.add(kelDesTextField, 1, 7);
 			kelDesTextField.setPromptText("Masukkan Kel/Desa asal");
 			kelDesTextField.getText();
-                        //----------------------------------------
+  
                         Label kec = new Label("Kecamatan:");
 			grid.add(kec, 1, 8);
 			
@@ -144,7 +144,6 @@ public class ElektronikKTP extends Application {
 			berlakuTextField.setPromptText("Masukkan Batas Waktu KTP");
 			berlakuTextField.getText();
                         
-                        //-------------------------------------------
 			Label goldar = new Label("Golongan Darah:");
 			grid.add(goldar, 0, 14);
 			
