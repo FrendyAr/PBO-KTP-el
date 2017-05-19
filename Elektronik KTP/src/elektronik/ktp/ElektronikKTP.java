@@ -9,16 +9,22 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 public class ElektronikKTP extends Application {
+    
+    private TableView table = new TableView();
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -97,10 +103,10 @@ public class ElektronikKTP extends Application {
 			kelDesTextField.getText();
   
                         Label kec = new Label("Kecamatan:");
-			grid.add(kec, 1, 8);
+			grid.add(kec, 0, 8);
 			
 			TextField kecPosTextField = new TextField();
-			grid.add(kecPosTextField, 2, 8);
+			grid.add(kecPosTextField, 1, 8);
 			kecPosTextField.setPromptText("Masukkan Kecamatan");
 			kecPosTextField.getText();
 			
@@ -169,6 +175,12 @@ public class ElektronikKTP extends Application {
 			hbtn.setAlignment(Pos.BOTTOM_RIGHT);
 			hbtn.getChildren().add(btn3);
 			grid.add(hbtn3, 1, 17);
+                        
+                        Button btn4 = new Button("Tabel Penduduk");
+                        HBox hbtn4 = new HBox(10);
+                        hbtn4.setAlignment(Pos.BOTTOM_RIGHT);
+                        hbtn4.getChildren().add(btn4);
+                        grid.add(hbtn4, 1, 18);
 			
 			final Text actiontarget = new Text();
 			grid.add(actiontarget, 1, 19);
@@ -212,6 +224,50 @@ public class ElektronikKTP extends Application {
 			        }
 				}
 			});
+                        
+                        btn4.setOnAction(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                Label secondLabel = new Label("Hello");
+                 
+                BorderPane secondaryLayout = new BorderPane();
+                secondaryLayout.getChildren().add(secondLabel);
+                 
+                Scene secondScene = new Scene(secondaryLayout);
+ 
+                Stage secondStage = new Stage();
+                secondStage.setTitle("Tabel Penduduk");
+                secondStage.setScene(secondScene);
+                
+                secondStage.setWidth(300);
+                secondStage.setHeight(500);
+                
+                final Label label = new Label("Address Book");
+                label.setFont(new Font("Arial", 20));
+                
+                table.setEditable(true);
+ 
+                TableColumn firstNameCol = new TableColumn("RT");
+                TableColumn lastNameCol = new TableColumn("Nama");
+                TableColumn emailCol = new TableColumn("Alamat");
+                
+                table.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
+                
+                final VBox vbox = new VBox();
+                vbox.setSpacing(5);
+                vbox.setPadding(new Insets(10, 0, 0, 10));
+                vbox.getChildren().addAll(label, table);
+                 
+                Button btnCenter = new Button("Center");
+                table.setPadding(new Insets(25, 25, 25, 25));
+                secondaryLayout.setCenter(table);
+                 // Alignment.
+                BorderPane.setAlignment(table, Pos.BOTTOM_CENTER);
+  
+                secondStage.show();
+
+        }
+        });
 			
 //			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
