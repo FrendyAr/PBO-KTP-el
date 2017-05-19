@@ -1,113 +1,126 @@
-package elektronik.ktp;
+package application;
+
+import javafx.beans.property.SimpleStringProperty;
 
 public class Penduduk {
-    private String nik,tempatTglLahir, nama, jenisKelamin, alamat, rtRw, kelDesa, kecamatan, agama, stKawin
-            , pekerjaan, wargaNegara, berlakuHingga;
+	private final SimpleStringProperty nik, nama, tempatTglLahir, jenisKelamin, alamat, rtRw, kelDesa, kecamatan, 
+	agama, stKawin, pekerjaan, wargaNegara, berlakuHingga;
 
-    public Penduduk() {
-    }
+	public Penduduk(String nik, String nm, String TTL, String jk, String almt, String rtRw, 
+						String kelDesa, String kec, String agama, String stKwn, String pkjn,
+							String wrgNgr, String blkHingga) {
+		this.nik = new SimpleStringProperty(nik);
+		this.nama = new SimpleStringProperty(nm);
+		this.tempatTglLahir = new SimpleStringProperty(TTL);
+		this.jenisKelamin = new SimpleStringProperty(jk);
+		this.alamat = new SimpleStringProperty(almt);
+		this.rtRw = new SimpleStringProperty(rtRw);
+		this.kelDesa = new SimpleStringProperty(kelDesa);
+		this.kecamatan = new SimpleStringProperty(kec);
+		this.agama = new SimpleStringProperty(agama);
+		this.stKawin = new SimpleStringProperty(stKwn);
+		this.pekerjaan = new SimpleStringProperty(pkjn);
+		this.wargaNegara = new SimpleStringProperty(wrgNgr);
+		this.berlakuHingga = new SimpleStringProperty(blkHingga);
+		}
 
-    public String getAgama() {
-        return agama;
-    }
+	public String getNik() {
+	return nik.get();
+	}
+	
+	public void setNik(String NIK) {
+	nik.set(NIK);
+	}
+	
+	public String getNama() {
+	return nama.get();
+	}
+	
+	public void setNama(String nm) {
+	nama.set(nm);
+	}
+	public String getTempatTglLahir() {
+	return tempatTglLahir.get();
+	}
+	
+	public void setTempatTglLahir(String TTL) {
+	tempatTglLahir.set(TTL);
+	}
+	
+	public String getJenisKelamin() {
+	return jenisKelamin.get();
+	}
+	
+	public void setJenisKelamin(String jk) {
+	jenisKelamin.set(jk);
+	}
+	
+	public String getAlamat() {
+	return alamat.get();
+	}
+	
+	public void setAlamat(String almt) {
+	alamat.set(almt);
+	}
+	
+	public String getRtRw() {
+	return rtRw.get();
+	}
+	
+	public void setRtRw(String RTRW) {
+	rtRw.set(RTRW);
+	}
+	
+	public String getKelDesa() {
+	return kelDesa.get();
+	}
+	
+	public void setKelDesa(String kelDs) {
+	kelDesa.set(kelDs);
+	}
+	
+	public String getKecamatan() {
+	return kecamatan.get();
+	}
+	
+	public void setKecamatan(String kec) {
+	kecamatan.set(kec);
+	}
+	public String getAgama() {
+	return agama.get();
+	}
+	
+	public void setAgama(String agm) {
+	agama.set(agm);
+	}
+	
+	public String getStKawin() {
+	return stKawin.get();
+	}
+	public void setStKawin(String stKwn) {
+	stKawin.set(stKwn);
+	}
+	public String getPekerjaan() {
+	return pekerjaan.get();
+	}
+	
+	public void setPekerjaan(String pkjn) {
+	pekerjaan.set(pkjn);
+	}
+	public String getWargaNegara() {
+	return wargaNegara.get();
+	}
+	
+	public void setWargaNegara(String wrgngr) {
+	wargaNegara.set(wrgngr);
+	}
+	public String getBerlakuHingga() {
+	return berlakuHingga.get();
+	}
+	
+	public void setBerlakuHingga(String blkHingga) {
+	berlakuHingga.set(blkHingga);
+	}
 
-    public String getAlamat() {
-        return alamat;
-    }
-
-    public String getBerlakuHingga() {
-        return berlakuHingga;
-    }
-
-    public String getJenisKelamin() {
-        return jenisKelamin;
-    }
-
-    public String getKecamatan() {
-        return kecamatan;
-    }
-
-    public String getKelDesa() {
-        return kelDesa;
-    }
-
-    public String getNama() {
-        return nama;
-    }
-
-    public String getNik() {
-        return nik;
-    }
-
-    public String getPekerjaan() {
-        return pekerjaan;
-    }
-
-    public String getRtRw() {
-        return rtRw;
-    }
-
-    public String getStKawin() {
-        return stKawin;
-    }
-
-    public String getTempatTglLahir() {
-        return tempatTglLahir;
-    }
-
-    public String getWargaNegara() {
-        return wargaNegara;
-    }
-
-    public void setAgama(String agama) {
-        this.agama = agama;
-    }
-
-    public void setAlamat(String alamat) {
-        this.alamat = alamat;
-    }
-
-    public void setBerlakuHingga(String berlakuHingga) {
-        this.berlakuHingga = berlakuHingga;
-    }
-
-    public void setJenisKelamin(String jenisKelamin) {
-        this.jenisKelamin = jenisKelamin;
-    }
-
-    public void setKecamatan(String kecamatan) {
-        this.kecamatan = kecamatan;
-    }
-
-    public void setKelDesa(String kelDesa) {
-        this.kelDesa = kelDesa;
-    }
-
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-
-    public void setNik(String nik) {
-        this.nik = nik;
-    }
-
-    public void setPekerjaan(String pekerjaan) {
-        this.pekerjaan = pekerjaan;
-    }
-
-    public void setRtRw(String rtRw) {
-        this.rtRw = rtRw;
-    }
-
-    public void setStKawin(String stKawin) {
-        this.stKawin = stKawin;
-    }
-
-    public void setTempatTglLahir(String tempatTglLahir) {
-        this.tempatTglLahir = tempatTglLahir;
-    }
-
-    public void setWargaNegara(String wargaNegara) {
-        this.wargaNegara = wargaNegara;
-    }
 }
+
