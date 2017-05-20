@@ -34,8 +34,15 @@ public class EKTP extends Application {
  
     private final TableView<Penduduk> table = new TableView<>();
     private final ObservableList<Penduduk> data =
-            FXCollections.observableArrayList();
-            
+            FXCollections.observableArrayList(new Penduduk("9830491234", "Dian Sastro", "Malang, 5 Mei 1997", "Perempuan", "jl mawar no 7", "01/02", "Dau", "Dau", "Islam", "Blm kwn", "Pelajar", "WNI", "2019"),
+            		new Penduduk("9827334127", "Lazuardi Toram", "Bandung, 2 April 1990", "Laki-Laki", "Jl mawar no 8", "01/02", "Dau", "Dau", "Islam", "Blm kwn", "Pelajar", "WNI", "2019"),
+            		new Penduduk("1029381145", "Arini Kusnadi", "Jakarta, 17 Agustus 1998", "Perempuan", "jl mawar no 2", "01/02", "Dau", "Dau", "Islam", "Blm kwn", "Pelajar", "WNI", "2019"),
+            		new Penduduk("9928477231", "Joni kara", "Padang, 8 Juli 1999", "Laki-Laki", "jl mawar no 17", "01/02", "Dau", "Dau", "Islam", "Blm kwn", "Wiraswasta", "WNI", "2019"),
+            		new Penduduk("7829984783", "Bimbo Dudi", "Jepara, 26 Juni 1989", "Laki-Laki", "jl mawar no 18", "01/02", "Dau", "Dau", "Islam", "Blm kwn", "PNS", "WNI", "2019"),
+            		new Penduduk("8837948902", "Ninara Zakirana", "Kediri, 15 Maret 1995", "Perempuan", "jl mawar no 4", "01/02", "Dau", "Dau", "Islam", "Blm kwn", "Pegawai", "WNI", "2019"),
+            		new Penduduk("8028789487", "Linda Kurniasandi Faria", "Sukabumi, 10 Oktober 1993", "Perempuan", "jl mawar no 19", "01/02", "Dau", "Dau", "Islam", "Blm kwn", "PNS", "WNI", "2019"),
+            		new Penduduk("6890093984", "Yoria Sanadi Kundang", "Tangerang, 11 November 1985", "Laki-Laki", "jl mawar no 13", "01/02", "Dau", "Dau", "Islam", "Kawin", "Pengusaha", "WNI", "2019"));
+            		
     final HBox hb = new HBox();
  
     public static void main(String[] args) {
